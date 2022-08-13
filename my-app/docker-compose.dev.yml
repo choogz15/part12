@@ -1,0 +1,15 @@
+services:
+  hello-back:
+    image: hello-back-dev
+    build: 
+      context: ./hello-back
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3001:3000
+  hello-front:
+    image: hello-front-dev
+    build:
+      context: ./hello-front
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000

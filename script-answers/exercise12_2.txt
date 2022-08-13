@@ -1,0 +1,11 @@
+Script started on 2022-08-11 19:41:30+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+]0;jasper@jasper-Modern-14-B4MW: ~/part12[01;32mjasper@jasper-Modern-14-B4MW[00m:[01;34m~/part12[00m$ exitcho "hello"[3Pnordvpn dc JapanThailand[1Pountries IndonesiaPhilippines[4PVietnamSlovakia[1PHungaryUnited_Kingdom[1PStatesCzech_Republic[9PJapanCzech_Republic[1PUnited_StatesKingdom[7PHungarySlovakia[1PVietnamPhilippines[2PIndonesia[2Pountries Thailand[3PJapand[Kecho "hello"xit[K[Ksudo docker run -it ubuntu bash
+[sudo] password for jasper: 
+[?2004h]0;root@afe8ab01789b: /root@afe8ab01789b:/# [K]0;root@afe8ab01789b: /root@afe8ab01789b:/# mkdir /ur sr/src/app
+[?2004l[?2004h]0;root@afe8ab01789b: /root@afe8ab01789b:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@afe8ab01789b: /root@afe8ab01789b:/# [Kexit
+[?2004lexit
+]0;jasper@jasper-Modern-14-B4MW: ~/part12[01;32mjasper@jasper-Modern-14-B4MW[00m:[01;34m~/part12[00m$ exit
+exit
+
+Script done on 2022-08-11 19:42:16+02:00 [COMMAND_EXIT_CODE="0"]

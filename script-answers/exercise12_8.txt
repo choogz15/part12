@@ -1,0 +1,61 @@
+Script started on 2022-08-12 00:18:13+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="116" LINES="30"]
+]0;jasper@jasper-Modern-14-B4MW: ~/part12[01;32mjasper@jasper-Modern-14-B4MW[00m:[01;34m~/part12[00m$ exitsudo docker exec -it todo_backend-mongo-1 bash[22Pcontainer lsexec -it todo_backend-mongo-1 bash[K[17Pcontainer ls
+[sudo] password for jasper: 
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+d024f015199e   nginx     "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp         wizardly_thompson
+7b0b316e5712   mongo     "docker-entrypoint.s…"   48 minutes ago   Up 45 minutes   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+]0;jasper@jasper-Modern-14-B4MW: ~/part12[01;32mjasper@jasper-Modern-14-B4MW[00m:[01;34m~/part12[00m$ sudo docker container lsexit[Ksudo docker exec -it todo_backend-mongo-1 bash[22Pcontainer lsexec -it todo_backend-mongo-1 bash[1P[1@-
+root@7b0b316e5712:/# [Kroot@7b0b316e5712:/# mongo -u root -p example
+MongoDB shell version v5.0.10
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("309261f0-f8fa-4c79-8c68-a9ff3b0352c8") }
+MongoDB server version: 5.0.10
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-08-11T21:32:55.350+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> show[3G[Jsho[6G[3G[Jsh[5G[3G[Js[4G[3G[J[3Guse the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> show[3G[Jsho[6G[3G[Jsh[5G[3G[Js[4G[3G[J[3Gdb.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62f574e0bd7be4d77c356b0d"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62f574e0bd7be4d77c356b0e"), "text" : "Learn about containers", "done" : false }
+> db.todos.insert({[3G[Jdb.todos.insert({[20G
+... "text;[5G[J"text[10G:"[5G[J"text:[11G[5G[J"text[10G":"Increates[5G[J"text":"Increate[21G[5G[J"text":"Increat[20G[5G[J"text":"Increa[19Gse the number of tools in my oo[5G[J"text":"Increase the number of tools in my o[49G[5G[J"text":"Increase the number of tools in my [48Gtoolbelt:[5G[J"text":"Increase the number of tools in my toolbelt[56G"})[5G[J"text":"Increase the number of tools in my toolbelt"})[58G[5G[J"text":"Increase the number of tools in my toolbelt"})[57G[5G[J"text":"Increase the number of tools in my toolbelt",})[58G[5G[J"text":"Increase the number of tools in my toolbelt", })[59G[5G[J"text":"Increase the number of tools in my toolbelt", "})[60G[5G[J"text":"Increase the number of tools in my toolbelt", "d})[61G[5G[J"text":"Increase the number of tools in my toolbelt", "do})[62G[5G[J"text":"Increase the number of tools in my toolbelt", "don})[63G[5G[J"text":"Increase the number of tools in my toolbelt", "done})[64G[5G[J"text":"Increase the number of tools in my toolbelt", "done"})[65G[5G[J"text":"Increase the number of tools in my toolbelt", "done":})[66G[5G[J"text":"Increase the number of tools in my toolbelt", "done":f})[67G[5G[J"text":"Increase the number of tools in my toolbelt", "done":fa})[68G[5G[J"text":"Increase the number of tools in my toolbelt", "done":fal})[69G[5G[J"text":"Increase the number of tools in my toolbelt", "done":fals})[70G[5G[J"text":"Increase the number of tools in my toolbelt", "done":false})[71G[5G[J"text":"Increase the number of tools in my toolbelt", "done":false})[73G
+WriteResult({ "nInserted" : 1 })
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62f574e0bd7be4d77c356b0d"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62f574e0bd7be4d77c356b0e"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("62f5809ecec654d7b5bb20cd"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+root@7b0b316e5712:/# exit
+exit
+]0;jasper@jasper-Modern-14-B4MW: ~/part12[01;32mjasper@jasper-Modern-14-B4MW[00m:[01;34m~/part12[00m$ exit
+exit
+
+Script done on 2022-08-12 00:20:29+02:00 [COMMAND_EXIT_CODE="0"]
